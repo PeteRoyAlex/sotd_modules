@@ -1,1 +1,1 @@
-__all__ = ["text", "main_cats", "colours"]
+__all__ = ["sotd_filters"]
