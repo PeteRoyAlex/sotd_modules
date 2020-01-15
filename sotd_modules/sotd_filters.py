@@ -1135,7 +1135,38 @@ def colour(colour):
         return colour
 
 def sizes(sizes):
-    return sizes
+    sizes_final = sizes
+    wrong = ""
+    return sizes_final, wrong
+
+    # wrong = []
+    # sizes_final = []
+    # for thing in sizes:
+    #     start = thing
+    #     if "8" in thing:
+    #         thing = 8
+    #     elif "10" in thing:
+    #         thing = 10
+    #     elif "12" in thing:
+    #         thing = 12
+    #     elif "14" in thing:
+    #         thing = 14
+    #     elif "16" in thing:
+    #         thing = 16
+    #     elif "18" in thing:
+    #         thing = 18
+    #     elif "XL" in thing.upper():
+    #         thing = "1XL"
+    #     elif "M" in thing:
+    #         thing = "Medium"
+    #
+    #     if thing == start:
+    #         wrong.append(thing)
+    #     else:
+    #         sizes_final.append(str(thing))
+    #
+    # return sizes_final, wrong
+
 
 def gender(name):
     gender = ""
@@ -1173,3 +1204,14 @@ def hot_deals(price, rrp, discount):
     if price / rrp < discount:
         hot_deal = "Hot Deal"
     return hot_deal
+
+def price_cat(price):
+    price_category = ""
+    if price <= 5:
+        price_category = "Under £5"
+    elif price <= 10:
+        price_category = "Under £10"
+    elif price <= 20:
+        price_category = "Under £20"
+
+    return price_category
