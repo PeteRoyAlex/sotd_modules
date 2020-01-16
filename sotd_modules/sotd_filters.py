@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 def main_cat(name):
     Category = ""
 
@@ -1216,3 +1215,9 @@ def price_cat(price):
         price_category = "Under £20"
 
     return price_category
+
+def discount_perc(price, rrp):
+
+    perc = round((1 - (float(price) / float(rrp))) * 100)
+
+    return perc
