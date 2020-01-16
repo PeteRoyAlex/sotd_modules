@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 def main_cat(name):
     Category = ""
 
