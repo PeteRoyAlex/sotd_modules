@@ -99,7 +99,7 @@ def get_last_items_scraped_number(api_key, job_key):
 
     return items_count, hot_deal_count, reselling_count
 
-def otherstuff():
+def otherstuff(store_url):
 
     job_key = sotd_close.get_last_job_key(self.api_key, self.project_id)
 
@@ -134,6 +134,6 @@ def otherstuff():
     if ((((self.items_scraped - items_count >= 2) or (items_count - self.items_scraped >= 4)) and (items_count > 0) and (self.items_scraped > 0)) or (((self.hot_deal_scraped - hot_deal_count >= 1) or (hot_deal_count - self.hot_deal_scraped >= 1)) and (items_count > 0) and (self.items_scraped > 0))):
         time.sleep(5)
         try:
-            requests.get('https://us-central1-indigo-pod-316.cloudfunctions.net/wallis',timeout=5)
+            requests.get(f'https://us-central1-indigo-pod-316.cloudfunctions.net/{store_url}',timeout=5)
         except:
             pass
