@@ -101,9 +101,9 @@ def get_last_items_scraped_number(api_key, job_key):
 
 def otherstuff():
 
-    job_key = sotd_filters.get_last_job_key(self.api_key, self.project_id)
+    job_key = sotd_close.get_last_job_key(self.api_key, self.project_id)
 
-    items_count, hot_deal_count, reselling_count = sotd_filters.get_last_items_scraped_number(self.api_key, job_key)
+    items_count, hot_deal_count, reselling_count = sotd_close.get_last_items_scraped_number(self.api_key, job_key)
 
     for new in self.new_reselling_list:
         old_names = [x[0] for x in self.old_reselling_list]
@@ -125,7 +125,7 @@ def otherstuff():
                 body = body + info
 
         self.messageSubject = f"{num} New Items were found on {self.new_name}"
-        sotd_filters.sendMail([self.toAdd], self.messageSubject, body)
+        sotd_close.sendMail([self.toAdd], self.messageSubject, body)
         print("###########################")
         print("SENT EMAIL")
         print("###########################")
