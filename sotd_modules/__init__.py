@@ -1,1 +1,1 @@
-__all__ = ["sotd_filters"]
+__all__ = ["sotd_filters","sotd_close"]
