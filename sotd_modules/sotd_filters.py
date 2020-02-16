@@ -1089,9 +1089,9 @@ def colour(colour):
         viariants = ['Yellow', 'lemon']
         if any(x.lower() in colour.lower() for x in viariants):
             colour = viariants[0]
-        viariants = ['Red', 'berry', 'rose','Crimson','chilli']
+        viariants = [' Red','Red ','berry','rose','Crimson','chilli']
         if any(x.lower() in colour.lower() for x in viariants):
-            colour = viariants[0]
+            colour = 'Red'
         viariants = ['Blue', 'Navy', 'teal', 'sky', 'ultramarine','Cornflower','Aqua']
         if any(x.lower() in colour.lower() for x in viariants):
             colour = viariants[0]
