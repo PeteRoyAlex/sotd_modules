@@ -1134,38 +1134,99 @@ def colour(colour):
 
         return colour
 
+# def sizes(sizes):
+#     sizes_final = sizes
+#     wrong = ""
+#     return sizes_final, wrong
+
 def sizes(sizes):
-    sizes_final = sizes
-    wrong = ""
+    wrong = []
+    sizes_final = []
+    for size in sizes:
+        start = size
+        if "1" == size.strip():
+            size = 1
+        elif "2" == size.strip():
+            size = 2
+        elif "3" == size.strip():
+            size = 3
+        elif "4" == size.strip():
+            size = 4
+        elif "5" == size.strip():
+            size = 5
+        elif "6" == size.strip():
+            size = 6
+        elif "7" == size.strip():
+            size = 7
+        elif "8" == size.strip():
+            size = 8
+        elif "9" == size.strip():
+            size = 9
+        elif "10" == size.strip():
+            size = 10
+        elif "11" == size.strip():
+            size = 11
+        elif "12" == size.strip():
+            size = 12
+        elif "13" == size.strip():
+            size = 13
+        elif "14" == size.strip():
+            size = 14
+        elif "15" == size.strip():
+            size = 15
+        elif "16" == size.strip():
+            size = 16
+        elif "17" == size.strip():
+            size = 17
+        elif "18" == size.strip():
+            size = 18
+        elif "19" == size.strip():
+            size = 19
+        elif "20" == size.strip():
+            size = 20
+        elif "21" == size.strip():
+            size = 21
+        elif "22" == size.strip():
+            size = 22
+        elif "23" == size.strip():
+            size = 23
+        elif "24" == size.strip():
+            size = 24
+        elif "25" == size.strip():
+            size = 25
+        elif "26" == size.strip():
+            size = 26
+        elif "XXS" == size.upper().strip():
+            size = "XXS"
+        elif "XS" == size.upper().strip():
+            size = "XS"
+        elif ("S" == size.upper().strip()) or ("SMALL" == size.upper().strip()):
+            size = " S"
+        elif "M" == size.upper().strip():
+            size = " M"
+        elif "L" == size.upper().strip():
+            size = " L"
+        elif "XL" == size.upper().strip():
+            size = "XL"
+        elif "XXL" == size.upper().strip():
+            size = "2XL"
+        elif "XXXL" == size.upper().strip():
+            size = "3XL"
+        elif "XXXXL" == size.upper().strip():
+            size = "4XL"
+        elif "XXXXXL" == size.upper().strip():
+            size = "5XL"
+        elif "XXXXXXL" == size.upper().strip():
+            size = "6XL"
+
+        if size == start:
+            wrong.append(size)
+        else:
+            sizes_final.append(str(size))
+
+    sizes_final = [x.strip() for x in sizes_final]
     return sizes_final, wrong
 
-    # wrong = []
-    # sizes_final = []
-    # for thing in sizes:
-    #     start = thing
-    #     if "8" in thing:
-    #         thing = 8
-    #     elif "10" in thing:
-    #         thing = 10
-    #     elif "12" in thing:
-    #         thing = 12
-    #     elif "14" in thing:
-    #         thing = 14
-    #     elif "16" in thing:
-    #         thing = 16
-    #     elif "18" in thing:
-    #         thing = 18
-    #     elif "XL" in thing.upper():
-    #         thing = "1XL"
-    #     elif "M" in thing:
-    #         thing = "Medium"
-    #
-    #     if thing == start:
-    #         wrong.append(thing)
-    #     else:
-    #         sizes_final.append(str(thing))
-    #
-    # return sizes_final, wrong
 
 
 def gender(name):
