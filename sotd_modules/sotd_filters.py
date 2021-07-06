@@ -150,7 +150,7 @@ def main_cat(name):
 
 def sub_cat(name):
     Category = ""
-    # General Jeans Category
+    # General Jeans Category.
     jeans_names = ['jean','jeans']
     jeans_negatives = ['potato','shirt']
     filtering_jeans = any(x.lower() in name.lower() for x in jeans_names) and not any(x.lower() in name.lower() for x in jeans_negatives)
