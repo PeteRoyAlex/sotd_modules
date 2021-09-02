@@ -1,5 +1,5 @@
 def main_cat(name):
-    Category = ""
+    Category = None
 
     jeans_names = ['jean','jeans']
     jeans_negatives = ['potato','shirt']
@@ -149,7 +149,7 @@ def main_cat(name):
     return Category
 
 def sub_cat(name):
-    Category = ""
+    Category = None
     # General Jeans Category.
     jeans_names = ['jean','jeans']
     jeans_negatives = ['potato','shirt']
@@ -1130,13 +1130,13 @@ def colour(colour):
             colour = viariants[0]
 
         if this == colour:
-            colour = ""
+            colour = None
 
         return colour
 
 # def sizes(sizes):
 #     sizes_final = sizes
-#     wrong = ""
+#     wrong = None
 #     return sizes_final, wrong
 
 def sizes(sizes):
@@ -1230,7 +1230,7 @@ def sizes(sizes):
 
 
 def gender(name):
-    gender = ""
+    gender = None
     if "women" in name.lower():
         gender = "Women"
     elif " men" in name.lower():
@@ -1238,12 +1238,12 @@ def gender(name):
     elif name.lower().startswith( "men" ):
         gender = "Men"
     else:
-        gender = ""
+        gender = None
 
     return gender
 
 def perc_group(price, rrp):
-    percentage_group = ""
+    percentage_group = None
     num = price / rrp
     if num < 0.1:
         percentage_group = "Over 90% Off"
@@ -1256,18 +1256,18 @@ def perc_group(price, rrp):
     elif num < 0.5:
         percentage_group = "Over 50% Off"
     else:
-        percentage_group = ""
+        percentage_group = None
 
     return percentage_group
 
 def hot_deals(price, rrp, discount):
-    hot_deal = ""
+    hot_deal = None
     if price / rrp < discount:
         hot_deal = "Hot Deal"
     return hot_deal
 
 def price_cat(price):
-    price_category = ""
+    price_category = None
     if price <= 5:
         price_category = "Under £5"
     elif price <= 10:
